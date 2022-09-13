@@ -1,0 +1,68 @@
+<!-- Yan B -->
+<!DOCTYPE html>
+<html>
+
+<head>
+    <meta charset="UTF-8">
+    <title>CSS Grid #01</title>
+    <style>
+        
+        html,
+        body {
+            margin: 20px;
+            height: calc(100% - 40px);
+            background-color: lightgray;
+        }
+        
+        div {
+            display: flex;
+            align-items: center;
+            justify-content:space-around;
+            font-size: 30px;
+            border-radius: 10px;
+            background: purple;
+            color: white;
+        }
+        body{
+            display: grid;
+            grid-template-columns: 1fr 1fr 1fr 1fr;
+            grid-template-rows: repeat(5, 150px);
+            grid-auto-rows: span 2;
+            grid-row-start: 3;
+            grid-row-start: span 2;
+            gap: 20px 20px;
+        }
+        
+        .d16{
+            grid-row-end: span 2;
+        }
+        .d18{
+            grid-column-end: span 2;
+        }
+    </style>
+</head>
+
+<body>
+    <div class="d1">Num</div>
+    <div class="d2">/</div>
+    <div class="d3">*</div>
+    <div class="d4">-</div>
+    <div class="d5">7</div>
+    <div class="d6">8</div>
+    <div class="d7">9</div>
+    <div class="d8">+</div>
+    <div class="d9">4</div>
+    <div class="d10">5</div>
+    <div class="d11">6</div>
+    <div class="d12">.</div>
+    <div class="d13">1</div>
+    <div class="d14">2</div>
+    <div class="d15">3</div>
+    <div class="d16">enter</div>
+    <div class="d17">Del</div>
+    <div class="d18">0</div>
+</body>
+
+</html>
+
+
