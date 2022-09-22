@@ -1,0 +1,28 @@
+
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Questao06</title>
+</head>
+<body>
+    <script>
+        const total_eleitores = Number(prompt("Total de eleitores:"))
+        const votos_brancos = Number(prompt("Votos em branco:"))
+        const nulos = Number(prompt("Nulos:"))
+        const validos = Number(prompt("Validos:"))
+        const calculo = total_eleitores * votos_brancos / 100
+        const calculo1 = total_eleitores * nulos / 100
+        const calculo2 = total_eleitores * validos / 100
+        alert(`Votos em Branco ${calculo}%`)
+        alert(`Votos Nulos ${calculo1}%`)
+        alert(`Votos Validos ${calculo2}%`)
+
+        
+
+    </script>
+</body>
+</html>
