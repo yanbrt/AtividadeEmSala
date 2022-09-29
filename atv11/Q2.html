@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Q2</title>
+</head>
+<body>
+    
+    <script>
+        
+        const invest=Number(prompt("Onde será feito o investimento \n1. Poupança\n2. Fundos de ordem fixa: "))
+        const valor=Number(prompt("Digite o valor do investimento: "))
+        const poupanca=valor*0.05
+        const fixa=valor*0.10
+
+    if(invest==1){
+        alert(`O valor corrigido, de acordo com a opção `+invest+` é de: `+` ${poupanca.toFixed(2)}`)
+    }else{
+        alert(`O valor corrigido, de acordo com a opção `+invest+` é de: `+` ${fixa.toFixed(2)}`)
+    }
+
+    </script>
+
+</body>
+</html>

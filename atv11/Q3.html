@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+        const altura_pessoa = Number(prompt("Altura (m): "))
+        const sexo_pessoa = String(prompt("Sexo (M/F): "))
+
+         if(sexo_pessoa == 'M'){
+            peso_ideal = (72*altura_pessoa) - 58
+            alert(`Peso ideal: ${peso_ideal.toFixed(2)}`)
+         }else if(sexo_pessoa == 'F'){
+            peso_ideal = (62*altura_pessoa) - 44
+            alert(`Peso ideal: ${peso_ideal.toFixed(2)}`)
+         } else{
+            alert(`Digite de acordo com o que esta dentro do ( )`)
+         }
+    </script>
+</body>
+</html>

@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+        const nome_cliente = String(prompt("Nome : "))
+        const preco = String(prompt("Preço: "))
+
+        if(preco<=200){
+            novo_preco = preco - preco * 0.10
+            alert(`Nome: ${nome_cliente}\nDescontão cria: R$ ${novo_preco.toFixed(2)}`)
+
+        }else if(preco > 200 && preco <= 500){
+            novo_preco = preco - preco * 0.15
+            alert(`Nome: ${nome_cliente}\nDescontão cria: R$ ${novo_preco.toFixed(2)}`)
+
+        }else if(preco > 500){
+            novo_preco = preco - preco * 0.20
+            alert(`Nome: ${nome_cliente}\nDescontão cria: R$ ${novo_preco.toFixed(2)}`)
+
+        } else {
+            alert(`Entrada inválida`)
+        }
+    </script>
+</body>
+</html>
