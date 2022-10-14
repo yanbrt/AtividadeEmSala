@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>04</title>
+</head>
+<body>
+    <script>
+        let alunos = []
+        let notas = []
+        let notasgerais = []
+        let dados = []
+        
+
+        while(true){
+            let nomealuno = prompt("Insira a nome do aluno(Digite 'ok' para finalizar): ")
+            if(nomealuno == 'ok'){
+                break
+            }
+            let notaaluno = Number(prompt("Insira a nota do aluno: "))
+
+            alunos.push(nomealuno)
+            notas.push(notaaluno)
+        }
+
+        for(let i = 0; i < alunos.length; i++){
+            dados[i] = [
+                {
+                    nome: alunos[i],
+                    nota: notas[i]
+                }
+            ]
+        }
+
+        dados.forEach(a => {
+            notasgerais.push(a[0].nota)
+        })
+
+        let notamax = Math.max(...notasgerais)
+
+        let array = dados.filter(a => a[0].nota >= 7)
+
+        if(array.length <= 0){
+            alert("Não há destaques na turma")
+        }else{
+            alert(`A nota máxima foi ${notamax}`)
+        }
+
+        if(let (listanotas = notas <=7)){
+            alert(listanotas)
+        }
+        
+        
+    </script>
+</body>
+</html>

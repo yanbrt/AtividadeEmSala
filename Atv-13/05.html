@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Questão 06</title>
+</head>
+<body>
+    <script>
+        var vetor = ''
+        let nomesclientes = []
+        let idadesclientes = []
+        var lista = []
+        let filapreferencial = []
+        let filanormal = []
+
+        while (vetor == '') 
+        {
+            let nom = prompt("Informe o nome:  ")
+            let num = Number(prompt("Informe a idade: "))
+            vetor = prompt("Se desejar finalizar digite: 'FIM'")
+            nomesclientes.push(nom)
+            idadesclientes.push(num)
+            if (vetor == 'FIM') 
+            {
+                break
+            } else 
+            {
+                vetor = ''
+            }
+
+        }
+
+        for (let i = 0; i < nomes.length; i++) 
+        {
+            lista[i] = 
+            {
+                nome: nomesclientes[i],
+                idade: idadesclientes[i]
+            }
+        }
+
+        filanormal = lista.filter(cliente => cliente.idade <= 59)
+        filapreferencial = lista.filter(cliente => cliente.idade >= 60)
+        let ordemfilaAtendimento = []
+        filapreferencial.forEach(atend => {
+            ordemfilaAtendimento.push(atend.nome)
+        })
+        filanormal.forEach(atend => {
+            ordemfilaAtendimento.push(atend.nome)
+        })
+
+        alert(`A ordem de atendimento vai ser ${ordemfilaAtendimento}`)
+    </script>
+</body>
+</html>

@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>06</title>
+</head>
+<body>
+    <script>
+        let listanumeros = []
+        while(true){
+            let numeros = Number(prompt("Digite o valor do saque: "))
+            if(numeros == 0){
+                break
+            }
+            let divisor = numeros % 10
+            if(divisor == 0){
+                alert("Válido")
+
+            }else{
+                alert("Inválido")
+            }
+
+            listanumeros.push(numeros)
+        }
+
+    let validos = listanumeros.filter(a => a % 10 == 0)
+    let somavalidos = validos.reduce(
+        (valoranterior, valoratual) => valoranterior + valoratual, 0
+    );
+
+    alert(`Os saques validos foram: ${validos}`)
+    alert(`O total de saque: ${somavalidos}`)
+    alert(`Os saques inválidos foram: ${listanumeros.length - validos.length}`)
+
+        
+    </script>
+</body>
+</html>

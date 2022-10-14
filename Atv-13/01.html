@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>01</title>
+</head>
+<body>
+    <script>
+        let alunos = []
+        let notas = []
+
+        while(true){
+            let nome = prompt("Digite o nome do aluno('ok' para encerrar): ")
+            if(nome == 'ok'){
+                break
+            }
+            alunos.push(nome)
+        }
+
+        while(true){
+            let numeros = Number(prompt("Digite a nota dos alunos respectivamente('0' encerra): "))
+            if(numeros == 0){
+                break
+            }
+            notas.push(numeros)
+        }
+
+        const reducer = (accumulator, curr) => accumulator + curr
+        const media = notas.reduce(reducer) / 5
+        alert(`Os alunos são: ${alunos}
+        \nAs notas respectivamente são: ${notas}
+        \nA soma das notas é igual a: ${notas.reduce(reducer)}
+        \nA media dos alunos é igual a: ${media}`)
+        
+    </script>
+
+</body>
+</html>
